@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+declare var angular: any; 
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'My1stAngularProg';
+  title = 'My list';
   colors = ["Red", "Blue", "Green", "Black"];
 }

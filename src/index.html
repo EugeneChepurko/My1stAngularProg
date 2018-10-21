@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <head>
   <meta charset="utf-8">
   <title>My1stAngularProg</title>
@@ -10,5 +11,17 @@
 </head>
 <body>
   <app-root></app-root>
+  <div ng-app="My1stAngularProg" ng-controller="arrCtrl">
+      <label>Search: <input ng-model="carText"></label>
+           <ul>
+              <li ng-repeat="color in colors | filter : carText">{{color}}</li>
+           </ul>
+  </div>
+  <script>
+      var app = angular.module('My1stAngularProg', []);
+      app.controller('arrCtrl', function($scope) {
+          $scope.colors = ["Red", "Blue", "Black", "Green"];
+      });
+  </script>
 </body>
 </html>
